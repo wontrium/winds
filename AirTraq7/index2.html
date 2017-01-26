@@ -1,0 +1,146 @@
+<html style="   background-size:cover;     margin: 0; width:100%;  height:100%;   ">
+	<!--background-image: url('image/map/layer1.png');  -->
+	<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconbar.css">
+	<link rel="stylesheet" href="path/font-awesome-4.5.0/css/font-awesome.min.css">
+		<script src="js/jquery-1.11.1.min.js"></script>		
+		<style type="text/css">
+
+		
+h1 {font-size: 200%}
+h2 {font-size: 150%}
+p {font-size: 100%}
+p.big {font-size:20px}
+p.medium {font-size:15px}
+p.small {font-size:10px}
+
+</style>
+</head>
+	
+	<body style=" margin: 0; width:100%; height:100%;
+    padding: 0;  background-size:cover;   " >
+	<script>
+	var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+</script>
+<script>
+var nW,nH,oH,oW;
+function zoomToggle(iWideSmall,iHighSmall,iWideLarge,iHighLarge,whichImage){
+oW=whichImage.style.width;oH=whichImage.style.height;
+if((oW==iWideLarge)||(oH==iHighLarge)){
+nW=iWideSmall;nH=iHighSmall;}else{
+nW=iWideLarge;nH=iHighLarge;}
+whichImage.style.width=nW;whichImage.style.height=nH;
+}
+</script>
+<script>
+function hiddenn(pvar) {
+	 if(pvar==0){
+		document.getElementById("txt1").style.display = 'none';
+	 }else{
+	 document.getElementById("txt1").style.display = '';
+	 }
+	 
+}
+</script>
+	<script src="map.js"></script>	
+	
+	
+		<div id="content" style="  display: inline-block;    z-index: 25; position:relative; width:100%; height:70%;  " >
+			<!-- <div id="content_logo" style="  display: inline-block; position:absolute;   width:100%;   " > -->
+			<center>
+			<!-- <img  src="image/map/logo_nstda.png" style="  width:10%;  z-index: 25;" />
+						<img  src="image/map/logo_nectec.png" style=" width:10%; z-index: 25;" />
+						<img  src="image/map/logo_iccru.png" style=" width:10%; z-index: 25;" />
+						<img  src="image/map/logo_mbi2.png" style=" width:10%; z-index: 25;" /> -->
+		
+		<a class="active" href="index.html"><i class="fa fa-pie-chart"></i><p class="text-caption">เผนที่</p></a>
+		<!-- <img  id = "map"src="image/map/logo_mbi2.png" style=" width:15%; z-index: 25;" /> -->
+		
+			  <img  id="zoom_01" border="0" src="image/map/maps.gif" data-zoom-image="image/map/map2.gif"  width="65%" height = "65%" top="0%"onclick="zoomToggle('80%','90%','100%','110%',this);"> 
+			 
+			  </center>
+			<!--  <img  src="image/map/NECTEC-co.jpg" style=" width:100%;height:30%; z-index: 25;" /> -->
+					<!-- 	<img  src="image/map/logo_nstda.png" style="  width:15%;  z-index: 25;" />
+						<img  src="image/map/logo_nectec.png" style=" width:15%; z-index: 25;" />
+						<img  src="image/map/logo_iccru.png" style=" width:15%; z-index: 25;" />
+						<img  src="image/map/logo_mbi2.png" style=" width:15%; z-index: 25;" /> -->
+						<!-- </div> -->
+						 
+						
+</div> 
+			<!--  <div id="content_nstda" style=" width:50%; position:absolute;  position:relative; width:100%; height:100%; " >
+			 							<a class="active" href="index.html"><i class="fa fa-globe"></i><p class="text-caption">แผนที่</p>
+			 						
+			 						
+			 						</div> -->
+			
+			  <!-- <div id="content_map" style="  display: inline-block; position:relative; width:100%; height:35%;" >			 
+			  			 					
+			  							
+			  			 			</div> --> 
+
+
+		
+ 
+			
+    <div class="iconbar">
+	<img  src="image/map/time1.gif" style=" width:100%;height:5%; z-index: 25;" />
+	<p style="text-align:center;">	ตำเเหน่งที่คุณอยู่ปัจจุบัน </p>
+						<select>
+						
+  <option href="index2.html" >สำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ(CO) </option>
+  <option href="index2.html">ศูนย์ประชุมอุทยานวิทยาศาสตร์ประเทศไทย (CC)</option>
+  <option href="index2.html">BIOTEC PILOT</option>
+  <option href="index2.html">บ้านวิทยาศาสตร์สิรินธร(SSH)</option>
+  <option href="index2.html">MTEC</option>
+  <option href="index2.html"> BIOTEC</option>
+  <option href="index2.html"> NECTEC </option>
+
+</select>	
+	 <img  src="image/map/time2.gif" style=" width:100%;height:5%; z-index: 25;" />
+	 <a class="active" href="index.html"><i class="fa fa-globe"></i><p class="text-caption">แผนที่</p></a>
+        <a class="" href="graph.html"><i class="fa fa-pie-chart"></i><p class="text-caption">กราฟ</p></a>
+        <a class="" href="pollution-green.html"><i class="fa fa-cloud"></i><p class="text-caption">แจ้งเตือน</p></a>
+        <a class="" href="care.html"><i class="fa fa-medkit"></i><p class="text-caption">สุขภาพ</p></a>
+        <a class="" href="user.html"><i class="fa fa-user"></i><p class="text-caption">ผู้ใช้งาน</p></a> 
+     
+    </div><!--/.icon-bar-->
+</div>
+
+</div>
+
+<script>
+    $('#zoom_01').elevateZoom({
+    zoomType: "inner",
+cursor: "crosshair",
+zoomWindowFadeIn: 60%,
+zoomWindowFadeOut: 75%
+   }); 
+</script>
+	</body>
+    <!-- jquery -->
+    <script src="js/jquery-2.2.2.min.js"></script>
+    
+    <!-- js -->
+    <script src="js/script.js"></script>
+
+</html>
